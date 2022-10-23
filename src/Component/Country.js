@@ -20,23 +20,22 @@ const Country = ({country}) => {
       setCurrentWeather(apiResponse) 
     })
  },[country.capital, country.latlng]);
- 
+
   if(currentWeather) {
      const imgId = currentWeather.current.weather[0].icon
      const imgSrc = `http://openweathermap.org/img/wn/${imgId}@2x.png`
     return (
       <div className="country-container">
       <h1 className="country-name">{country.name.common}</h1>
-      <p className="country-capital">Capital: {country.capital}</p>
-      <p className="country-area">Area: {country.area}km2</p>
       <ul>
-    
-      </ul>
-      <p className="country-located">Continent: {country.continents}</p>
-      <p className='country.population'>Population: {country.population} (million)</p>
-      <h3 className="country-borders">Borders: {country.borders ? <ul>
+        <li className="country-caliital">Capital: {country.capital}</li>
+        <li className="country-area">Area: {country.area}km2</li>
+        <li className="country-located">Continent: {country.continents}</li>
+        <li className='country.population'>Population: {country.population} (million)</li>
+      </ul>  
+      <h4 className="country-borders">Border with: {country.borders ? <ul>
         {country.borders.map(border => <li className="country-border-list" key={Math.random() * 1000} style={{fontWeight: 'normal', fontSize:'15px'}} >{border}</li>)}
-      </ul> : <p style={{fontWeight: 'normal', fontSize:'15px'}}>No border</p>}</h3> 
+      </ul> : <p style={{fontWeight: 'normal', fontSize:'15px'}}>No border</p>}</h4> 
         <img src={country.flags.png} alt="Country flag"></img>
           <h2>Weather in {country.capital}</h2>
           <p>Current Condition: {currentWeather.current.weather[0].description.toUpperCase()}</p>    
