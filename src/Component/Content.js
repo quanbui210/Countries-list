@@ -9,23 +9,23 @@ const Content = ({allCountries, countries, setCountries}) => {
                <Country allCountries={allCountries} setCountries={setCountries}country={countries[0]}></Country>
              )
     }
-    //  else if ((countries.length > 2 && countries.length < 10) || countries.length === 0) {
-    //   <ul>
-    //   {countries.map(country => (<li className='list-container' key={Math.random() * 100}>
-    //   <div className='card-container'>
-    //   <div className="card">
-    //     <img src={country.flags.png} className="card-img-top" alt='aaa' />
-    //     <div className="card-body">
-    //     <h5 className="card-title">{country.name.common}</h5>
-    //     <button className="card-btn" onClick={() => {setCountries([country])}}>show</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   </li>))}
-    // </ul>
-    // }
-    return <ul>
-      {allCountries.map(country => (<li className='list-container' key={Math.random() * 100}>
+    if (countries.length > 2 && countries.length < 10) {
+       <ul>
+       {countries.map(country => (<li className='list-container' key={Math.random() * 100}>
+       <div className='card-container'>
+       <div className="card">
+         <img src={country.flags.png} className="card-img-top" alt='aaa' />
+         <div className="card-body">
+         <h5 className="card-title">{country.name.common}</h5>
+         <button className="card-btn" onClick={() => {setCountries([country])}}>show</button>
+           </div>
+         </div>
+       </div>
+       </li>))}
+     </ul>
+     } 
+      return <ul>
+    {allCountries.map(country => (<li className='list-container' key={Math.random() * 100}>
       <div className='card-container'>
       <div className="card">
         <img src={country.flags.png} className="card-img-top" alt='aaa' />
@@ -36,7 +36,8 @@ const Content = ({allCountries, countries, setCountries}) => {
        </div>
       </div>
       </li>))}
-    </ul> }
+    </ul>
+     }
 
 
 export default Content;
