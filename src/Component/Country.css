@@ -1,0 +1,28 @@
+.country-name {
+    color: #fff
+}
+
+.country-capital {
+    
+}
+.country-area {
+    
+}
+.country-located {
+    
+}
+
+.country-border{
+
+}
+
+.country-border-list {
+    list-style-type: disc;
+}
+
+.country-container {
+    color: rgb(187, 187, 187);
+    border: 1px solid #ccc;
+    width: 100%;
+    padding-left: 28px;
+}

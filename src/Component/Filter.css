@@ -1,0 +1,21 @@
+.filter-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.filter-text{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ccc
+}
+
+.filter-input {
+    border: 1px solid rgb(141, 140, 140);
+    border-radius: 4px;
+    font-size: 15px;
+}
