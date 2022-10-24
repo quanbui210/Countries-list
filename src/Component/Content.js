@@ -10,7 +10,7 @@ const Content = ({allCountries, countries, setCountries}) => {
              )
     }
     if (countries.length > 2 && countries.length < 10) {
-       <ul>
+       return <ul>
        {countries.map(country => (<li className='list-container' key={Math.random() * 100}>
        <div className='card-container'>
        <div className="card">
